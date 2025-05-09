@@ -129,14 +129,16 @@ header{
   font-weight: 600;
 }
 .home-text p {
-  color: rgb(115, 115, 115);
+  color: black;
+  line-height: 20px;
+  text-align: justify;
+  font-size: 1rem;
   padding-bottom: 2rem;
-
 }
 .home-animation-text{
   padding: 1rem 0;
 }
-.home-btn{
+.home-contact{
   display: flex;
   align-items: center;
   justify-content: center; 
@@ -149,25 +151,38 @@ header{
   color: white;
   transform: rotate(-30deg);
 }
-
-/* .grid-item {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: white;
-} */
-
 .home-image {
-  flex-basis: 50%;
+  flex-basis: 45%;
 }
-.home-animation-text h2{
-  padding: .6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  /* display: inline-block; */
-  /* width: 65%; */
+/* typing animation home text */
+.home-animation-text{
+  height: 40px;
+  width: 330px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  margin: 1rem 0; 
+  color: #000000db;
 }
+.home-animation-text span{
+  position: relative;
+  padding: 10px 5px;
+}
+.home-animation-text span::before{
+  content: "";
+  right: -5px;
+  top: 50%;
+  position: absolute;
+  height: 25px;
+  width: 2px;
+  background: #000000ad;
+  transform: translateY(-50%);
+}
+
 /*  ==========Home part end========== */
 
 

@@ -8,42 +8,37 @@ menuBtn.addEventListener('click', () => {
     nevItem.classList.toggle('showNav')
 })
 
-// let cartDetails = document.querySelector(".caretDetails");
-// let webCloseICons = document.querySelector(".close-icon")
-
-// console.log(webCart)
 
 
-// cartDetails.addEventListener('click', () => {
-//     cartDetails.classList.add('show-web-design-cart');
-//     webCloseICons.classList.remove('show-web-design-cart')
-// })
 
+//typing animation home text
 
-// Typing effect
-const text = " Fronted Developer";
-let showSkills = document.querySelector(".showSkills");
-console.log(showSkills);
+const dynamikText = document.querySelector(".home-animation-text span");
+console.log(dynamikText);
+const sentences = ["Frontend Specialist", "Fronted Developer",  "UI / UX Designer", "Web aplication Designer", "Javascripts Developer"];
 
-
-let index = 0;
+// initialize
+let wordIndex = 0;
+let charIndex = 0;
 let isDeleting = false;
 
-const typeEffect = () => {
-    if (!isDeleting && index <= text.length) {
-        showSkills.textContent = text.substring(0, index);
-        index++;
-    } else if (isDeleting && index >= 0) {
-        showSkills.textContent = text.substring(0, index)
-        index--;
+
+const typeEffect = ( ) =>{
+    const currentWord = sentences[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamikText.textContent = currentChar;
+
+
+    if(!isDeleting && charIndex < currentWord.length){
+        charIndex++;
+        setTimeout(typeEffect, 150);
+    }else if(isDeleting && charIndex > 0){
+        charIndex--;
+        setTimeout(typeEffect, 100);
+    }else{
+        isDeleting = !isDeleting;
+        wordIndex = !isDeleting ? (wordIndex + 1) % sentences.length : wordIndex;
+        setTimeout(typeEffect, 1000);
     }
-    
-    if (index > text.length) {
-        isDeleting = true;
-    }
-    else if (index < 0) {
-        isDeleting = false
-    }
-    setTimeout(typeEffect, 100);
 }
-typeEffect();
+typeEffect()
