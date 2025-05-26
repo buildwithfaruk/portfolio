@@ -1,4 +1,8 @@
 @media only screen and (min-width: 576px) and (max-width: 992px) {
+  section, footer {
+    margin: auto;
+    padding: 1rem 0;
+}
   .navber {
     display: none;
   }
@@ -38,12 +42,27 @@
   .about-right-area {
     padding: 0 2rem;
   }
+  .cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .skill-container {
     flex-direction: column;
   }
+  .qualification {
+  margin-bottom: 50px;
+}
+.project-items {
+    flex-basis: 45%;
+}
 }
 
 @media only screen and (min-width: 200px) and (max-width: 576px) {
+  section, footer {
+    margin: auto;
+    padding: 1rem 0;
+}
   .navber {
     display: none;
   }
@@ -79,12 +98,24 @@
   .abot-container {
     flex-direction: column;
   }
+  .about-right-area p {
+    padding: 1rem;
+}
   .about-right-area {
-    padding: 0 2rem;
+  margin: auto;
   }
+  .about-right-area .cv-btn a {
+   margin: 2rem 1rem;
+}
   .skill-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  .services-container {
+   flex-direction: column;
+   flex-basis: 80% !important;
+}
   .container{
     padding: 1rem;
     /* background: rgba(0, 0, 0, 0.3); */
@@ -108,5 +139,13 @@
   .timeline::after{
     top: 18px;
   }
-
+  .project-items {
+    flex-basis: 90%;
+}
+form {
+    width: 95%;
+}
+footer h2 {
+    font-size: 1rem;
+}
 }

@@ -15,7 +15,7 @@ menuBtn.addEventListener('click', () => {
 
 const dynamikText = document.querySelector(".home-animation-text span");
 console.log(dynamikText);
-const sentences = ["Frontend Specialist", "Fronted Developer",  "UI / UX Designer", "Web aplication Designer", "Javascripts Developer"];
+const sentences = ["Fronted Developer",  "UI / UX Designer"];
 
 // initialize
 let wordIndex = 0;
